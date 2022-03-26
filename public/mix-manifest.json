@@ -1,4 +1,9 @@
 {
-    "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/plugins/icheck-bootstrap/LICENSE": "/plugins/icheck-bootstrap/LICENSE",
+    "/plugins/icheck-bootstrap/icheck-bootstrap.css": "/plugins/icheck-bootstrap/icheck-bootstrap.css",
+    "/plugins/icheck-bootstrap/icheck-bootstrap.min.css": "/plugins/icheck-bootstrap/icheck-bootstrap.min.css",
+    "/css/adminlte.min.css": "/css/adminlte.min.css",
+    "/plugins/jquery/jquery.min.js": "/plugins/jquery/jquery.min.js",
+    "/plugins/bootstrap/js/bootstrap.bundle.min.js": "/plugins/bootstrap/js/bootstrap.bundle.min.js",
+    "/js/adminlte.min.js": "/js/adminlte.min.js"
 }
