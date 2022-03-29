@@ -68,5 +68,15 @@
             <!-- Main row -->
             <!-- /.row (main row) -->
         </div><!-- /.container-fluid -->
+
+        <div class="row">
+            <div class="col-12">
+                <ul>
+                    <li>Organization: {{ $organization }}</li>
+                    <li>Store: {{ $store }}</li>
+                </ul>
+            </div>
+        </div>
+
     </section>
 </x-app-layout>
