@@ -3,7 +3,7 @@
         "config:base"
     ],
     "rangeStrategy": "pin",
-    "baseBranches": ["dependency-updates"],
+    "baseBranches": ["main"],
     "packageRules": [
         {
             "updateTypes": ["patch", "pin", "digest"],
