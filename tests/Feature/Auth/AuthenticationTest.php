@@ -28,6 +28,18 @@ class AuthenticationTest extends TestCase
         ]);
 
         $this->assertAuthenticated();
+        $response->assertRedirect('/login-organization');
+
+        $response = $this->post('/login-organization', [
+            'organizationId' => 1
+        ]);
+
+        $response->assertRedirect('/login-store');
+
+        $response = $this->post('/login-store', [
+            'storeId' => 1
+        ]);
+
         $response->assertRedirect(RouteServiceProvider::HOME);
     }
 
