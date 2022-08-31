@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
             $table->foreignId('organization_id');
-            $table->integer('reference',false, true);
+            $table->integer('reference', false, true);
             $table->foreignId('client_id');
             $table->foreignId('created_by');
             $table->foreignId('staore_id');

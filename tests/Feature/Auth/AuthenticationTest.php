@@ -31,13 +31,13 @@ class AuthenticationTest extends TestCase
         $response->assertRedirect('/login-organization');
 
         $response = $this->post('/login-organization', [
-            'organizationId' => 1
+            'organizationId' => 1,
         ]);
 
         $response->assertRedirect('/login-store');
 
         $response = $this->post('/login-store', [
-            'storeId' => 1
+            'storeId' => 1,
         ]);
 
         $response->assertRedirect(RouteServiceProvider::HOME);

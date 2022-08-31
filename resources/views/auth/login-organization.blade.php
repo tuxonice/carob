@@ -12,8 +12,9 @@
                 <div class="input-group mb-3">
                     <select class="form-control" name="organizationId">
                         <option value="">--Organization--</option>
-                        <option value="1">Organization 1</option>
-                        <option value="2">Organization 2</option>
+                        @foreach($organizations as $organization)
+                            <option value="{{ $organization->id }}">{{ $organization->name }}</option>
+                        @endforeach
                     </select>
                 </div>
                 <div class="row">
