@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('clients', function (Blueprint $table) {
             $table->id();
             $table->foreignId('organization_id');
-            $table->string('name',128);
+            $table->string('name', 128);
             $table->multiLineString('address');
             $table->string('zipcode', 32);
             $table->string('city', 128);

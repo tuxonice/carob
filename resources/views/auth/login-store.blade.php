@@ -12,8 +12,9 @@
                 <div class="input-group mb-3">
                     <select class="form-control" name="storeId">
                         <option value="">--Store--</option>
-                        <option value="1">Store 1</option>
-                        <option value="2">Store 2</option>
+                        @foreach($stores as $store)
+                            <option value="{{ $store->id }}">{{ $store->name }}</option>
+                        @endforeach
                     </select>
                 </div>
                 <div class="row">

@@ -16,7 +16,7 @@ class OrganizationIsValid
      */
     public function handle(Request $request, Closure $next)
     {
-        if (!$request->session()->has('organizationId')) {
+        if (! $request->session()->has('organizationId')) {
             return redirect('organization-login');
         }
 

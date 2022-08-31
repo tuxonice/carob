@@ -10,7 +10,7 @@ class OrderController extends Controller
     /**
      * Handle the incoming request.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return View
      */
     public function list(Request $request): View

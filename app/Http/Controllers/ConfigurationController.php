@@ -10,7 +10,7 @@ class ConfigurationController extends Controller
     /**
      * Handle the incoming request.
      *
-     * @param \Illuminate\Http\Request $request
+     * @param  \Illuminate\Http\Request  $request
      * @return View
      */
     public function index(Request $request): View
