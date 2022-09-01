@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\Auth\AdminAuthenticatedSessionController;
-use App\Http\Controllers\Auth\ShopAuthenticatedSessionController;
+use App\Http\Controllers\Admin\Auth\AdminAuthenticatedSessionController;
+use App\Http\Controllers\Shop\Auth\ShopAuthenticatedSessionController;
 use Illuminate\Support\Facades\Route;
 
 Route::domain('shop.carob.local')->group(function () {
