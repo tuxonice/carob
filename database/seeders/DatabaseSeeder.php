@@ -18,7 +18,6 @@ class DatabaseSeeder extends Seeder
     {
         User::factory(1)->create(['email' => 'admin@example.com']);
         User::factory(10)->create();
-        Organization::factory(1)->create();
-        Store::factory(3)->create();
+        Organization::factory(3)->has(Store::factory()->count(3))->create();
     }
 }

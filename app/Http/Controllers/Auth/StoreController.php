@@ -11,7 +11,8 @@ class StoreController extends Controller
 {
     public function loginStore(Request $request)
     {
-        $stores = Store::all();
+        $organizationId = session()->get('organizationId');
+        $stores = Store::where('organization_id', $organizationId)->get();
 
         return view('auth.login-store', ['stores' => $stores]);
     }

@@ -18,8 +18,8 @@ class DashboardController extends Controller
     {
         $organizationId = $request->session()->get('organizationId');
         $storeId = $request->session()->get('storeId');
-        $organization = Organization::find($organizationId)->first();
-        $store = Store::find($storeId)->first();
+        $organization = Organization::find($organizationId);
+        $store = Store::find($storeId);
 
         return view('dashboard', [
             'organization' => $organization,
