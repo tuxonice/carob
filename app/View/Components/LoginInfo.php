@@ -18,7 +18,7 @@ class LoginInfo extends Component
         $organizationId = session()->get('organizationId');
         $storeId = session()->get('storeId');
         $organizationName = Organization::find($organizationId)->name;
-        $storeName = Store::find($storeId)->name;
+        $storeName = $storeId ? Store::find($storeId)->name : '';
 
         return view('components.login-info', [
             'organizationName' => $organizationName,

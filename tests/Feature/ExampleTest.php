@@ -6,6 +6,12 @@ use Tests\TestCase;
 
 class ExampleTest extends TestCase
 {
+    public function setUp(): void
+    {
+        parent::setUp();
+        request()->headers->set('HOST', env('SHOP_HOST'));
+    }
+
     /**
      * A basic test example.
      *

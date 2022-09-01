@@ -15,7 +15,7 @@
             <x-auth-validation-errors class="mb-4" :errors="$errors" />
 
 
-            <form action="{{ route('login') }}" method="post">
+            <form action="{{ route('admin-login') }}" method="post">
                 @csrf
                 <div class="input-group mb-3">
                     <x-input id="email" placeholder="Email" class="form-control" type="email" name="email" :value="old('email')" required autofocus />

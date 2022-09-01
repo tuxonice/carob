@@ -7,9 +7,15 @@ use App\Providers\RouteServiceProvider;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Tests\TestCase;
 
-class AuthenticationTest extends TestCase
+class AdminAuthenticationTest extends TestCase
 {
     use RefreshDatabase;
+
+    public function setUp(): void
+    {
+        parent::setUp();
+        request()->headers->set('HOST', env('ADMIN_HOST'));
+    }
 
     public function test_login_screen_can_be_rendered()
     {
@@ -32,12 +38,6 @@ class AuthenticationTest extends TestCase
 
         $response = $this->post('/login-organization', [
             'organizationId' => 1,
-        ]);
-
-        $response->assertRedirect('/login-store');
-
-        $response = $this->post('/login-store', [
-            'storeId' => 1,
         ]);
 
         $response->assertRedirect(RouteServiceProvider::HOME);

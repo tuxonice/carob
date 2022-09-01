@@ -2,6 +2,7 @@
 
 namespace App\Http;
 
+use App\Http\Middleware\ContextSession;
 use App\Http\Middleware\OrganizationIsValid;
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 
@@ -39,6 +40,7 @@ class Kernel extends HttpKernel
             \App\Http\Middleware\VerifyCsrfToken::class,
             \Illuminate\Routing\Middleware\SubstituteBindings::class,
             //'hasOrganization' => OrganizationIsValid::class,
+            ContextSession::class,
         ],
 
         'api' => [
