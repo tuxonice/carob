@@ -1,4 +1,4 @@
-<x-guest-layout>
+<x-admin.guest-layout>
 <div class="login-box">
     <!-- /.login-logo -->
     <div class="card card-outline card-primary">
@@ -32,4 +32,4 @@
     </div>
     <!-- /.card -->
 </div>
-</x-guest-layout>
+</x-admin.guest-layout>
