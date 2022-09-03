@@ -52,3 +52,7 @@ Route::domain('admin.carob.local')->group(function () {
         Route::get('/tools', [ToolsController::class, 'index'])->name('admin-tools');
     });
 });
+
+Route::get('/', function(){
+    return View('home');
+});
