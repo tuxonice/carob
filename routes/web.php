@@ -31,7 +31,7 @@ Route::domain(config('carob.shop_domain'))->group(function () {
         Route::post('login-store', [ShopStoreController::class, 'setStore']);
         Route::get('/', \App\Http\Controllers\Shop\DashboardController::class)->name('shop-dashboard');
         Route::get('/dashboard', \App\Http\Controllers\Shop\DashboardController::class)->name('shop-dashboard');
-        Route::get('/clients', [\App\Http\Controllers\Shop\ClientController::class, 'index'])->name('shop-clients');
+        Route::get('/clients', [\App\Http\Controllers\Shop\ClientController::class, 'list'])->name('shop-clients');
         Route::get('/mailbox', [\App\Http\Controllers\Shop\MailboxController::class, 'index'])->name('shop-mailbox');
         Route::get('/orders', [\App\Http\Controllers\Shop\OrderController::class, 'list'])->name('shop-orders');
         Route::get('/configuration', [\App\Http\Controllers\Shop\ConfigurationController::class, 'index'])->name('shop-configuration');

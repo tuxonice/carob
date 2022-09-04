@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers\Shop;
 
+use App\Models\Organization;
 use Illuminate\Http\Request;
 use Illuminate\View\View;
 
@@ -13,8 +14,11 @@ class ClientController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return View
      */
-    public function index(Request $request): View
+    public function list(Request $request): View
     {
-        return view('shop.client');
+        $organizationId = $request->session()->get('organizationId');
+        $organization = Organization::find($organizationId);
+
+        return view('shop.client', ['clients' => $organization->clients()->get()]);
     }
 }

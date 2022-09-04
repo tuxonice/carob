@@ -17,7 +17,6 @@ class StoreFactory extends Factory
     public function definition()
     {
         return [
-            //'organization_id' => 1,
             'name' => $this->faker->company(),
             'address' => $this->faker->address(),
             'active' => true,
