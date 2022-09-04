@@ -11,12 +11,6 @@ const mix = require('laravel-mix');
  |
  */
 
-// mix.js('resources/js/app.js', 'public/js').postCss('resources/css/app.css', 'public/css', [
-//     require('postcss-import'),
-//     require('tailwindcss'),
-//     require('autoprefixer'),
-// ]);
-
 mix.copyDirectory('resources/plugins/fontawesome-free', 'public/plugins/fontawesome-free');
 mix.copyDirectory('resources/plugins/icheck-bootstrap', 'public/plugins/icheck-bootstrap');
 mix.copyDirectory('resources/plugins/jquery-ui', 'public/plugins/jquery-ui');

@@ -4,7 +4,7 @@ use App\Http\Controllers\Admin\Auth\AdminAuthenticatedSessionController;
 use App\Http\Controllers\Shop\Auth\ShopAuthenticatedSessionController;
 use Illuminate\Support\Facades\Route;
 
-Route::domain('shop.carob.local')->group(function () {
+Route::domain(config('carob.shop_domain'))->group(function () {
     Route::middleware('guest')->group(function () {
         Route::get('login', [ShopAuthenticatedSessionController::class, 'create'])
             ->name('shop-login');
@@ -18,7 +18,7 @@ Route::domain('shop.carob.local')->group(function () {
     });
 });
 
-Route::domain('admin.carob.local')->group(function () {
+Route::domain(config('carob.admin_domain'))->group(function () {
     Route::middleware('guest')->group(function () {
         Route::get('login', [AdminAuthenticatedSessionController::class, 'create'])
             ->name('admin-login');

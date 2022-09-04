@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 */
 require __DIR__.'/auth.php';
 
-Route::domain('shop.carob.local')->group(function () {
+Route::domain(config('carob.shop_domain'))->group(function () {
     Route::middleware(['auth'])->group(function () {
         Route::get('login-organization', [ShopOrganizationController::class, 'loginOrganization'])->name('shop-login-organization');
         Route::get('login-store', [ShopStoreController::class, 'loginStore'])->name('shop-login-store');
@@ -39,7 +39,7 @@ Route::domain('shop.carob.local')->group(function () {
     });
 });
 
-Route::domain('admin.carob.local')->group(function () {
+Route::domain(config('carob.admin_domain'))->group(function () {
     Route::middleware(['auth'])->group(function () {
         Route::get('login-organization', [AdminOrganizationController::class, 'loginOrganization'])->name('admin-login-organization');
         Route::post('login-organization', [AdminOrganizationController::class, 'setOrganization']);
@@ -53,6 +53,6 @@ Route::domain('admin.carob.local')->group(function () {
     });
 });
 
-Route::get('/', function(){
+Route::get('/', function () {
     return View('home');
 });
